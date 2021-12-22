@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+   class Meo {
+       ten;
+       canNang;
+       constructor(ten,cannang) {
+           this.ten= ten;
+           this.canNang = cannang;
+       }
+       setCanNang(cannang){
+           this.canNang = cannang;
+       }
+       getCanNang(){
+           return this.canNang
+       }
+       Can(chuot){
+           this.canNang+=1;
+           chuot.setCanNang(chuot.getCanNang()-1)
+       }
+   }
+   class Chuot {
+       ten;
+       canNang;
+       constructor(ten,cannang) {
+           this.ten= ten;
+           this.canNang = cannang;
+       }
+       setCanNang(cannang){
+           this.canNang = cannang;
+       }
+       getCanNang(){
+           return this.canNang
+       }
+   }
+   meo = new Meo('Tom',10);
+   chuot = new Chuot('Jerry',2)
+   meo.Can(chuot)
+   document.write(meo.canNang)
+   document.write('<br>')
+   document.write(chuot.canNang)
+</script>
+</body>
+</html>
